@@ -20,16 +20,16 @@ public class MyFiles {
     public static void main(String[] args) {
 
         FileReadAndWrite frd = new FileReadAndWrite();
-        //  frd.binaryReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
-        //        "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
+          frd.binaryReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
+                "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
 
-        //     System.out.println("Closed");
-//        frd.characterReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
-//                "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
-//frd.streamReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
-        //           "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
-//        frd.serializeAndDeserialize(
-//                "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\swap");
+             System.out.println("Closed");
+       frd.characterReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
+               "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
+frd.streamReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
+                   "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
+       frd.serializeAndDeserialize(
+               "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\swap");
 
 frd.fileSystem();
     }

@@ -5,8 +5,6 @@
 package labs.fh.app;
 
 import labs.fh.data.FileReadAndWrite;
-import labs.fh.data.Item;
-import labs.fh.data.Product;
 
 /**
  *

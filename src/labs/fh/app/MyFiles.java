@@ -4,7 +4,10 @@
  */
 package labs.fh.app;
 
-import labs.fh.data.FileReadAndWrite;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import labs.fh.data.FileSystem;
 
 /**
  *
@@ -14,22 +17,39 @@ public class MyFiles {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        FileReadAndWrite frd = new FileReadAndWrite();
-          frd.binaryReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
-                "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
+        try {
+            //        FileReadAndWrite frd = new FileReadAndWrite();
+//          frd.binaryReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
+//                "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
+//
+//             System.out.println("Closed");
+//       frd.characterReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
+//               "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
+//frd.streamReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
+//                   "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
+//       frd.serializeAndDeserialize(
+//               "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\swap");
+//
+//frd.fileSystem();
+//frd.ConsoleInputOutput();
 
-             System.out.println("Closed");
-       frd.characterReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
-               "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
-frd.streamReadAndWrite("E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\some.txt",
-                   "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\other.txt");
-       frd.serializeAndDeserialize(
-               "E:\\NeatBeansProjects\\FileHandling\\src\\labs\\fh\\data\\swap");
-
-frd.fileSystem();
+FileSystem fs=new FileSystem();
+//fs.fileSystemPath();
+//fs.fileNavigation();
+//fs.fileAttrinbutes();
+//fs.modifyFileAttributes();
+//fs.fileOperations();
+//fs.fileCopyAndMove();
+//fs.deletePath();
+//fs.zipHandling();
+fs.httpHandle();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(MyFiles.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }

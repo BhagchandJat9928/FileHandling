@@ -17,6 +17,7 @@
 package labs.fh.data;
 
 import java.io.BufferedReader;
+import java.io.Console;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -35,6 +36,7 @@ import java.io.Writer;
 import java.nio.charset.Charset;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -101,6 +103,18 @@ public class FileReadAndWrite {
             System.out.println(line);
         }
     }
+    public void ConsoleInputOutput() {
+        Console sc = System.console();
+        if(sc==null){
+            System.out.println("Console is not Supported");
+            return;
+        }
+        System.out.print("Enter username: ");
+       sc.readLine();
+        System.out.print("Enter password: ");
+        sc.readPassword();
+        
+    }
 
     public void serializeAndDeserialize(String file) {
         Item item = new Item();
@@ -138,7 +152,7 @@ public class FileReadAndWrite {
             fs.getRootDirectories().forEach(e->System.out.println(e));
             String sperator=fs.getSeparator();
             System.out.println(sperator);
-        
+           
         
     }
     }
